@@ -1,0 +1,24 @@
+
+.header-area{
+    .nav-area{
+        display: flex;
+        height: 70px;
+        align-items: center;
+
+        .logo-area{
+            img{
+                width: 100px;
+                height: 40px;
+            }
+            background-color: azure;
+        }
+
+        .about-area{
+
+        }
+
+        .contact-area{
+
+        }
+    }
+}

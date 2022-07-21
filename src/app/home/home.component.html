@@ -1,0 +1,19 @@
+<header class="header-area">
+    <div class="nav-area">
+        <div class="logo-area" routerLink='./home'>
+            <img src="assets/Logo.png" alt="Pokemon Logo">
+        </div>
+        <div class="about-area"> <button routerLink="./about" routerLinkActive="active">ABOUT US</button></div>
+        <div class="contact-area"><button routerLink="./contactUs" routerLinkActive="active">CONTACT US</button></div>
+    </div>
+    <div class="banner-area"></div>
+</header>
+<content>
+    <router-outlet></router-outlet>
+</content>
+<footer>
+    <div class="footer-area">
+        <div class="about-area"> <a routerLink="./about" routerLinkActive="active">ABOUT US</a></div>
+        <div class="contact-area"><a routerLink="./contactUs" routerLinkActive="active">CONTACT US</a></div>
+    </div>
+</footer>
