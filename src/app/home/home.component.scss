@@ -1,5 +1,6 @@
-
 .header-area{
+    background-color: red;
+    height: 400px;
     .nav-area{
         display: flex;
         height: 70px;
@@ -21,4 +22,13 @@
 
         }
     }
+}
+
+.content-area{
+
+}
+
+.footer-area{
+    background-color: blue;
+    height: 50px;
 }

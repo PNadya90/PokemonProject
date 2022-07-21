@@ -1,5 +1,12 @@
-.home-component{
+.container {
     height: 100vh;
-    width: 100%;
-    background-color: blueviolet;
+    background: black;
+    color: white;
+
+    app-home {
+        min-height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
 }
