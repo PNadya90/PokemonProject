@@ -1,34 +1,43 @@
-.header-area{
+.header-area {
     background-color: red;
     height: 400px;
-    .nav-area{
+
+    .nav-area {
         display: flex;
         height: 70px;
         align-items: center;
+        background-color: black;
 
-        .logo-area{
-            img{
+        .logo-area {
+            img {
                 width: 100px;
                 height: 40px;
             }
+
             background-color: azure;
         }
 
-        .about-area{
+        .about-btn {}
 
-        }
+        .contact-btn {}
 
-        .contact-area{
-
-        }
     }
+
+    .banner-area {
+        background-color: pink;
+        height: calc(100% - 70px);
+        display: flex;
+    }
+
 }
 
-.content-area{
-
+.content-area {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
 }
 
-.footer-area{
+.footer-area {
     background-color: blue;
     height: 50px;
 }

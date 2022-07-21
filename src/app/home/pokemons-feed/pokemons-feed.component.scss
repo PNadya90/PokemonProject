@@ -1,4 +1,6 @@
-.blok{
-    height: 200px;
+.pokemons-feed-component{
+    display: flex;
+    height: 100%;
     background-color: aqua;
+    flex-direction: column;
 }
