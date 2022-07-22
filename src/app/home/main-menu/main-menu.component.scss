@@ -64,7 +64,7 @@ $border-color-hover: $color-black;
         display: flex;
 
         .logo-area {
-            margin-right: 25px;
+            margin-right: 1%;
 
             img {
                 width: 150px;
@@ -75,7 +75,7 @@ $border-color-hover: $color-black;
         }
 
         .about-btn {
-            margin: 0px 25px;
+            margin: 0px 1%;
         }
 
     }
@@ -83,14 +83,18 @@ $border-color-hover: $color-black;
     .contact-btn {}
 }
 
-.login-btn {}
+.login-btn {
+
+min-width: 80px;
+}
 
 .btn {
     @include reset-button;
     display: block;
     text-decoration: none;
-    text-transform: uppercase;
-    padding: 16px 36px 22px;
+    font-size: 12px;
+    padding: 1em;
+    height: 70px;
     background-color: $btn-background;
     color: $btn-color;
     border: 2px solid $border-color;
@@ -143,7 +147,7 @@ $border-color-hover: $color-black;
 }
 
 .banner-area {
-    background-color: pink;
+    background-color: #f0ffff;
     height: calc(100% - 70px);
 
     #carouselExampleCaptions {
@@ -161,4 +165,14 @@ $border-color-hover: $color-black;
         }
     }
 
+}
+
+@media screen and (max-width:700px) {
+    .nav-area {
+        .left-container{
+            .logo-area{
+                display: none;
+            }
+        }
+    }
 }
