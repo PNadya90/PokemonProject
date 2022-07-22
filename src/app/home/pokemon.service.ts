@@ -1,5 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
+import { Pokemon } from '../shared/pokemon.model';
 import { PokemonsByType, PokemonTypes } from '../shared/pokemonType.model';
 
 @Injectable({
@@ -12,8 +13,11 @@ export class PokemonService {
 getPokemonTypes(){
   return this.http.get<PokemonTypes>('https://pokeapi.co/api/v2/type/');  
 }
-getPokemonsByType(typeId: String){  
+getPokemonsByType(typeId: string){  
   return this.http.get<PokemonsByType>('https://pokeapi.co/api/v2/type/'+typeId); 
+}
+getPokemonsById(pokemonId:string){
+  return this.http.get<Pokemon>('https://pokeapi.co/api/v2/pokemon/'+pokemonId);
 }
 
 }

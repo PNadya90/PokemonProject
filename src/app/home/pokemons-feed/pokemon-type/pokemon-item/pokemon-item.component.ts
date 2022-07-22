@@ -18,7 +18,6 @@ export class PokemonItemComponent implements OnInit {
   ngOnInit(): void {
   }
   showDescr(){
-    this.router.navigate(['/description/1']);
     if(this.pokemon){
       this.router.navigateByUrl('/description/'+this.pokemon.id);
     }
