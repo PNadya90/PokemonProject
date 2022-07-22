@@ -1,31 +1,26 @@
 <div class="descr-container">
     <div class="descr-head-area">
-        <h1>Hello, my name is Wing!</h1>
+        <h1>Hello, my name is {{pokemon.name | titlecase}}!</h1>
     </div>
     <div class="photo-container">
         <div class="main-img-container">
-            <img class="main-img" src="assets/16.png">
+            <img class="main-img" [src]="pokemon.sprites.other.home.front_default">
         </div>
-        <div class="addition-img" src="assets/16s.png">
-            <img class="small-img" src="assets/16s.png">
-            <img class="small-img" src="assets/16s.png">
-            <img class="small-img" src="assets/16s.png">
-            <img class="small-img" src="assets/16s.png">
+        <div class="addition-img" >
+            <img class="small-img" [src]="pokemon.sprites.front_shiny">
+            <img class="small-img" [src]="pokemon.sprites.back_shiny">
+            <img class="small-img" [src]="pokemon.sprites.front_default">
+            <img class="small-img" [src]="pokemon.sprites.back_default">
         </div>
 
     </div>
     <div class="decr-info">
-        <p>ID: id</p>
-        <p>Base expirience: 431</p>
-        <p>Abilities: 123</p>
-        <p>Height:12</p>
-        <p>Weight:12</p>
-        <p>Weight:12</p>
-        <p>Weight:12</p>
-        <p>Weight:12</p>
-        <p>Weight:12</p>
-        <p>Weight:12</p>
-        <p>Weight:12</p>
+        <p>ID: {{pokemon.id}}</p>
+        <p>Base expirience: {{pokemon.base_experience}}</p>
+        <p>Abilities: {{pokemon.base_experience}}</p>
+        <p>Height:{{pokemon.height}}</p>
+        <p>Weight:{{pokemon.weight}}</p>
+        <p *ngFor="let stat of pokemon.stats"> {{stat.stat.name}}: {{stat.base_stat}}</p>
     </div>
     <div class="add-button-area">
         <button class="add-button">
