@@ -1,48 +1,8 @@
 .header-area {
-    background-color: red;
+    background-color: #f0ffff;
     height: 400px;
 
-    .nav-area {
-        display: flex;
-        height: 70px;
-        align-items: center;
-        background-color: black;
-
-        .logo-area {
-            img {
-                width: 100px;
-                height: 40px;
-            }
-
-            background-color: azure;
-        }
-
-        .about-btn {}
-
-        .contact-btn {}
-
-    }
-
-    .banner-area {
-        background-color: pink;
-        height: calc(100% - 70px);
-
-        #carouselExampleCaptions {
-            .carousel-indicators {
-                bottom: -18px;
-                margin-bottom: 0;
-            }
-
-            img {
-                width: 50% !important;
-                min-width: 300px;
-                height: 300px !important;
-                margin: auto;
-                // background-color: blue;
-            }
-        }
-
-    }
+    
 }
 
 .content-area {
