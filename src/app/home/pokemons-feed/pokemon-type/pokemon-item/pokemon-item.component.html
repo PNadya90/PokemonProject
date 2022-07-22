@@ -1,8 +1,19 @@
-<div class="pokemon-item-component">
+<div class="pokemon-item-component" (click)="showDescr()">
     <div class="pokemon-card">
         <div class="imgBox">
-            <a><img /></a>
+            <img class="pokemon-img" src="assets/16.png" />
+        </div>
+        <div class="pokemon-desc">
+            <div> Name: Wing</div>
+            <div> Hp: 40</div>
+            <div> Attack: 40</div>
+            <div> Defense: 40</div>
+            <div> Speed: 40</div>
+        </div>
+        <div class="add-button-area">
+            <button class="add-button" (click)="addToCart($event)">
+                <i class="bi bi-cart-plus"></i>
+            </button>
         </div>
     </div>
-
 </div>

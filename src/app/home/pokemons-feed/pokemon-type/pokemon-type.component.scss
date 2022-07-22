@@ -57,6 +57,7 @@ $border-color-hover: $color-black;
                 padding: 5px;
                 height: 40px;
                 width: 75vw;
+                min-width: 280px;
                 background-color: $btn-background;
                 color: $btn-color;
                 border: 2px solid $border-color;

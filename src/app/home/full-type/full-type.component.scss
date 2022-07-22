@@ -1,0 +1,16 @@
+.pokemon-type-component {
+    display: flex;
+    flex-direction: column;
+
+    .header-type {
+        margin: 25px 0px;
+        display: flex;
+        justify-content: center;
+    }
+
+    .container-items {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+}

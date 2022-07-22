@@ -11,6 +11,7 @@ import { PokemonTypeComponent } from './home/pokemons-feed/pokemon-type/pokemon-
 import { PokemonsFeedComponent } from './home/pokemons-feed/pokemons-feed.component';
 import { DescriptionComponent } from './home/description/description.component';
 import { PokemonItemComponent } from './home/pokemons-feed/pokemon-type/pokemon-item/pokemon-item.component';
+import { FullTypeComponent } from './home/full-type/full-type.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { PokemonItemComponent } from './home/pokemons-feed/pokemon-type/pokemon-
     PokemonTypeComponent,
     PokemonsFeedComponent,
     DescriptionComponent,
-    PokemonItemComponent
+    PokemonItemComponent,
+    FullTypeComponent
   ],
   imports: [
     BrowserModule,
