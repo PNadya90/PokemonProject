@@ -1,6 +1,9 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, Input, OnChanges, OnInit, SimpleChanges } from '@angular/core';
 import { Router } from '@angular/router';
-import { PokemonType } from 'src/app/shared/pokemonType.model';
+import { take } from 'rxjs';
+import { PType } from 'src/app/shared/pokemonType.model';
+import { ToolsService } from 'src/app/shared/tools.service';
+import { PokemonService } from '../../pokemon.service';
 
 @Component({
   selector: 'app-pokemon-type',
@@ -8,18 +11,26 @@ import { PokemonType } from 'src/app/shared/pokemonType.model';
   styleUrls: ['./pokemon-type.component.scss']
 })
 export class PokemonTypeComponent implements OnInit {
-  @Input() type: PokemonType;
-
-  constructor(private router: Router) {
+  @Input() typeId: string;
+  pokemonList: PType[];
+  @Input()
+  typeName: string;
+  constructor(private router: Router, private pokemonSrv: PokemonService, private toolSrv:ToolsService) {
 
   }
 
   ngOnInit(): void {
+    this.pokemonSrv.getPokemonsByType(this.typeId).pipe(take(1)).subscribe(res => {
+      this.pokemonList = res.pokemon.map((el) => {
+        el.pokemon.id = this.toolSrv.extratId(el.pokemon.url);
+        return el.pokemon;
+      })
+    })
   }
   showType() {
-    this.router.navigate(['/fullType/1']);
-    if (this.type) {
-      this.router.navigateByUrl('/fullType/' + this.type.id);
+    this.router.navigate(['/fullType/' + this.typeId]);
+    if (this.typeId) {
+      this.router.navigateByUrl('/fullType/' + this.typeId);
     }
   }
 }

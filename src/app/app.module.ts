@@ -12,6 +12,7 @@ import { PokemonsFeedComponent } from './home/pokemons-feed/pokemons-feed.compon
 import { DescriptionComponent } from './home/description/description.component';
 import { PokemonItemComponent } from './home/pokemons-feed/pokemon-type/pokemon-item/pokemon-item.component';
 import { FullTypeComponent } from './home/full-type/full-type.component';
+import { HttpClientModule } from '@angular/common/http'
 
 @NgModule({
   declarations: [
@@ -28,7 +29,8 @@ import { FullTypeComponent } from './home/full-type/full-type.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

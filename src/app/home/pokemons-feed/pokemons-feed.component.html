@@ -1,7 +1,4 @@
 <div class="pokemons-feed-component">
-    <app-pokemon-type></app-pokemon-type>
-    <app-pokemon-type></app-pokemon-type>
-    <app-pokemon-type></app-pokemon-type>
-    <app-pokemon-type></app-pokemon-type>
+    <app-pokemon-type  *ngFor="let pType of typeList | slice:0:2;" [typeName]="pType.name" [typeId]="pType.id"></app-pokemon-type> 
 </div>
 
