@@ -26,9 +26,23 @@
     .banner-area {
         background-color: pink;
         height: calc(100% - 70px);
-        display: flex;
-    }
 
+        #carouselExampleCaptions {
+            .carousel-indicators {
+                bottom: -18px;
+                margin-bottom: 0;
+            }
+
+            img {
+                width: 50% !important;
+                min-width: 300px;
+                height: 300px !important;
+                margin: auto;
+                // background-color: blue;
+            }
+        }
+
+    }
 }
 
 .content-area {
