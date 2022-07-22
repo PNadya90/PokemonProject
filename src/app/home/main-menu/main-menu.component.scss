@@ -56,7 +56,7 @@ $border-color-hover: $color-black;
                         transparent 2px,
                         transparent 5px);
                 border-top: 1px solid $border-color-hover;
-                animation: stripe-slide 12s infinite linear forwards;
+                animation: stripe-slide 1s infinite linear forwards;
             }
     }
 
@@ -136,7 +136,7 @@ min-width: 80px;
                         transparent 2px,
                         transparent 5px);
                 border-top: 1px solid $border-color-hover;
-                animation: stripe-slide 12s infinite linear forwards;
+                animation: stripe-slide 1s infinite linear forwards;
             }
         }
     }
