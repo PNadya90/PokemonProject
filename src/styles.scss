@@ -8,3 +8,10 @@
 
  }
 
+ .toast-container {
+    position: fixed !important; 
+    .toast-success{
+        background-color: #ffcc01 !important;
+        color: black;
+    }
+}

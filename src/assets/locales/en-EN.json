@@ -28,5 +28,7 @@
     "slider_t2":"RRRRR RRRRRRRR RRRRRR!",
     "slider_t3":"BUUUUULBASAURRRRRR",
     "hi_my_name":"Hello, my name is ",
-	"show_more":"SHOW MORE POKEMONS"
+	"show_more":"SHOW MORE POKEMONS",
+    "success":"Successefuly",
+    "added": "Added to cart"
 }

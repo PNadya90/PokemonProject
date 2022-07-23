@@ -5,7 +5,8 @@ import { take } from 'rxjs';
 import { Pokemon } from 'src/app/shared/pokemon.model';
 import { PType } from 'src/app/shared/pokemonType.model';
 import { UserAccountService } from '../user-account/user-account.service';
-
+import { LocalizationService } from 'src/app/internationalization/localization.service';
+import { ToastrService } from 'ngx-toastr';
 @Component({
   selector: 'app-description',
   templateUrl: './description.component.html',
@@ -14,7 +15,11 @@ import { UserAccountService } from '../user-account/user-account.service';
 export class DescriptionComponent implements OnInit {
   pokemon: Pokemon;
   id: string;
-  constructor(private route: ActivatedRoute, private pokemonSrv: PokemonService, private userSrv:UserAccountService) { }
+  constructor(private route: ActivatedRoute,
+     private pokemonSrv: PokemonService,
+      private userSrv:UserAccountService,
+      private toastr: ToastrService,
+      private translationSrv:LocalizationService) { }
 
   ngOnInit(): void {
     let paramId = this.route.snapshot.paramMap.get('id');
@@ -38,5 +43,6 @@ export class DescriptionComponent implements OnInit {
     }
 
     this.userSrv.addToCart(currentPokemon);
+    this.toastr.success(this.translationSrv.translate('success'),this.translationSrv.translate('added'));
   }
 }

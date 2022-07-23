@@ -3,6 +3,8 @@ import { Router } from '@angular/router';
 import { UserAccountService } from 'src/app/home/user-account/user-account.service';
 import { Pokemon } from 'src/app/shared/pokemon.model';
 import { PType } from 'src/app/shared/pokemonType.model';
+import { ToastrService } from 'ngx-toastr';
+import { LocalizationService } from 'src/app/internationalization/localization.service';
 
 @Component({
   selector: 'app-pokemon-item',
@@ -13,7 +15,11 @@ export class PokemonItemComponent implements OnInit {
   @Input()
   public pokemon: Pokemon;
 
-  constructor(private router:Router, private userSrv:UserAccountService) {
+  constructor(private router:Router,
+     private userSrv:UserAccountService,
+     private toastr: ToastrService,
+     private translationSrv:LocalizationService
+     ) {
 
    }
 
@@ -34,5 +40,6 @@ export class PokemonItemComponent implements OnInit {
     }
 
     this.userSrv.addToCart(currentPokemon);
+    this.toastr.success(this.translationSrv.translate('success'),this.translationSrv.translate('added'));
   }
 }
