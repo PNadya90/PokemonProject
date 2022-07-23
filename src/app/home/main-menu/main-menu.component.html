@@ -78,13 +78,13 @@
     aria-labelledby="staticBackdropLabel" aria-hidden="true">
     <div class="modal-dialog">
         <div class="modal-content">
-            <div class="modal-header">
+            <div class="modal-header" [ngClass]="{'rtl': lang=='HE'}">
                 <h5 class="modal-title" id="staticBackdropLabel">{{'sign_in'|translate}}</h5>
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
-            <div class="modal-body">
+            <div class="modal-body" [ngClass]="{'rtl-body': lang=='HE'}">
                 <div class="login-area">
-                    <label for="login">{{'log_in'|translate}}: </label>
+                    <label for="login">{{'log_in'|translate}} </label>
                     <input [(ngModel)]="login" type="text" value="user" id="login">
                 </div>
                 <div class="password-area">
@@ -93,7 +93,7 @@
                 </div>
 
             </div>
-            <div class="modal-footer">
+            <div class="modal-footer"  [ngClass]="{'rtl': lang=='HE'}">
                 <div class="contact-btn"><button data-bs-dismiss="modal" class="btn btn--stripe btn--radius"
                         routerLink="./userAccount" routerLinkActive="active" (click)="logIn()">{{'log_in'|translate}}</button></div>
             </div>

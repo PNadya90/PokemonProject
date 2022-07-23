@@ -81,7 +81,7 @@ $border-color-hover: $color-black;
     }
 }
 
-.rtl-orientation{    
+.rtl-orientation {
     flex-direction: row-reverse;
 }
 
@@ -149,22 +149,25 @@ $border-color-hover: $color-black;
 }
 
 
-.right-group{
+.right-group {
     display: flex;
 
-    .lang{
+    .lang {
         padding: 4px;
         margin-left: 5px;
-    } 
+    }
+
     .dropdown-menu {
-        min-width:inherit;
-        li{
-            a{
+        min-width: inherit;
+
+        li {
+            a {
                 padding: 10px;
             }
         }
-      }
+    }
 }
+
 .banner-area {
     background-color: #f0ffff;
     height: calc(100% - 70px);
@@ -182,7 +185,8 @@ $border-color-hover: $color-black;
             height: 300px !important;
             margin: auto;
         }
-        .carousel-caption{
+
+        .carousel-caption {
             bottom: -35px;
         }
     }
@@ -192,7 +196,41 @@ $border-color-hover: $color-black;
 .modal {
     .modal-dialog {
         .modal-content {
+            .modal-header {
+                display: flex;
 
+                button {
+                    margin: 0 5px;
+                }
+            }
+     
+            .rtl {
+                flex-direction: row-reverse;
+            }
+            .modal-body{
+                display: flex;
+                flex-direction: column;
+            }
+            .rtl-body{
+          
+                align-items: flex-end;
+                .login-area{
+                    label{
+                        direction: rtl;
+                    }
+                    input{
+                        direction: rtl;
+                    }
+                }
+                .password-area{
+                    label{
+                        direction: rtl;
+                    }
+                    input{
+                        direction: rtl;
+                    }
+                }
+            }
             label {
                 display: block;
                 font-weight: bold;
