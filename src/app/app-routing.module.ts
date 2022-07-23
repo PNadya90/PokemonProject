@@ -5,6 +5,7 @@ import { ContactComponent } from './contact/contact.component';
 import { DescriptionComponent } from './home/description/description.component';
 import { FullTypeComponent } from './home/full-type/full-type.component';
 import { PokemonsFeedComponent } from './home/pokemons-feed/pokemons-feed.component';
+import { UserAccountComponent } from './home/user-account/user-account.component';
 
 const routes: Routes = [
   { path: '', component: PokemonsFeedComponent},
@@ -13,6 +14,7 @@ const routes: Routes = [
   {path: 'contactUs', component:ContactComponent},
   {path: 'description/:id', component: DescriptionComponent},
   {path: 'fullType/:id', component: FullTypeComponent},
+  {path: 'userAccount', component: UserAccountComponent},
 ];
 
 @NgModule({

@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
+import { UserAccountService } from '../user-account/user-account.service';
 
 @Component({
   selector: 'app-main-menu',
@@ -6,13 +7,17 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./main-menu.component.scss']
 })
 export class MainMenuComponent implements OnInit {
-
-  constructor() { }
+   login:string;
+   pass:string;
+  constructor(private userSrv:UserAccountService) { }
 
   ngOnInit(): void {
   }
-  
-  login(){
 
+  logIn(){
+    this.userSrv.signIn(this.login, this.pass);
+    console.log(this.login);
+    
+    
   }
 }

@@ -4,8 +4,7 @@
             <img src="assets/Logo.png" alt="Pokemon Logo">
         </div>
         <div class="home-btn-area">
-            <button class="btn btn--stripe btn--radius" routerLink="./home"
-                routerLinkActive="active">HOME</button>
+            <button class="btn btn--stripe btn--radius" routerLink="./home" routerLinkActive="active">HOME</button>
         </div>
         <div class="about-btn"> <button class="btn btn--stripe btn--radius" routerLink="./about"
                 routerLinkActive="active">ABOUT US</button></div>
@@ -13,7 +12,9 @@
                 routerLinkActive="active">CONTACT US</button></div>
     </div>
 
-    <button class="btn btn--stripe  login-btn">LOGIN</button>
+    <button class="btn btn--stripe  login-btn" data-bs-toggle="modal" data-bs-target="#staticBackdrop"
+        >LOGIN</button>
+
 </div>
 <div class="banner-area">
     <div id="carouselExampleCaptions" class="carousel carousel-dark slide" data-bs-ride="false">
@@ -58,5 +59,32 @@
             <span class="carousel-control-next-icon" aria-hidden="true"></span>
             <span class="visually-hidden">Next</span>
         </button>
+    </div>
+</div>
+
+<div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+    aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="staticBackdropLabel">Sign in:</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <div class="login-area">
+                    <label for="login">Login: </label>
+                    <input [(ngModel)]="login" type="text" value="user" id="login">
+                </div>
+                <div class="password-area">
+                    <label for="password">Password: </label>
+                    <input [(ngModel)]="pass" type="password" value="password" id="password">
+                </div>
+
+            </div>
+            <div class="modal-footer">
+                <div class="contact-btn"><button data-bs-dismiss="modal" class="btn btn--stripe btn--radius" routerLink="./userAccount"
+                    routerLinkActive="active" (click)="logIn()">Sign in</button></div>
+            </div>
+        </div>
     </div>
 </div>

@@ -12,7 +12,9 @@ import { PokemonsFeedComponent } from './home/pokemons-feed/pokemons-feed.compon
 import { DescriptionComponent } from './home/description/description.component';
 import { PokemonItemComponent } from './home/pokemons-feed/pokemon-type/pokemon-item/pokemon-item.component';
 import { FullTypeComponent } from './home/full-type/full-type.component';
-import { HttpClientModule } from '@angular/common/http'
+import { HttpClientModule } from '@angular/common/http';
+import { UserAccountComponent } from './home/user-account/user-account.component'
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -25,12 +27,14 @@ import { HttpClientModule } from '@angular/common/http'
     PokemonsFeedComponent,
     DescriptionComponent,
     PokemonItemComponent,
-    FullTypeComponent
+    FullTypeComponent,
+    UserAccountComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -44,20 +44,20 @@ $border-color-hover: $color-black;
     background-color: #f0ffff;
     margin: 0% 5%;
 
-    .active{
-            background-color: $btn-background-hover;
-            color: $btn-color-hover;
-            border-color: $border-color-hover;
+    .active {
+        background-color: $btn-background-hover;
+        color: $btn-color-hover;
+        border-color: $border-color-hover;
 
-            &:after {
-                background-image: repeating-linear-gradient(45deg,
-                        $btn-color-hover,
-                        $btn-color-hover 1px,
-                        transparent 2px,
-                        transparent 5px);
-                border-top: 1px solid $border-color-hover;
-                animation: stripe-slide 1s infinite linear forwards;
-            }
+        &:after {
+            background-image: repeating-linear-gradient(45deg,
+                    $btn-color-hover,
+                    $btn-color-hover 1px,
+                    transparent 2px,
+                    transparent 5px);
+            border-top: 1px solid $border-color-hover;
+            animation: stripe-slide 1s infinite linear forwards;
+        }
     }
 
     .left-container {
@@ -85,7 +85,7 @@ $border-color-hover: $color-black;
 
 .login-btn {
 
-min-width: 80px;
+    min-width: 80px;
 }
 
 .btn {
@@ -162,16 +162,32 @@ min-width: 80px;
             max-width: 450px;
             height: 300px !important;
             margin: auto;
-            // background-color: blue;
         }
     }
 
 }
 
+.modal {
+    .modal-dialog {
+        .modal-content {
+
+            label {
+                display: block;
+                font-weight: bold;
+                margin: 5px 0;
+            }
+
+        }
+    }
+}
+
+
+
+
 @media screen and (max-width:700px) {
     .nav-area {
-        .left-container{
-            .logo-area{
+        .left-container {
+            .logo-area {
                 display: none;
             }
         }
