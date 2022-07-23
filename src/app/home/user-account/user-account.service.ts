@@ -46,7 +46,6 @@ export class UserAccountService {
     this.$currentUser.next(null);
   }
   addToCart(pokemon:PType){
-    debugger
     let user = this.$currentUser.getValue();
     if(user){
       user.cartList.push(pokemon);

@@ -4,18 +4,30 @@
             <img src="assets/Logo.png" alt="Pokemon Logo">
         </div>
         <div class="home-btn-area">
-            <button class="btn btn--stripe btn--radius" routerLink="./home" routerLinkActive="active">HOME</button>
+            <button class="btn btn--stripe btn--radius" routerLink="./home" routerLinkActive="active">{{'home' |translate}}</button>
         </div>
         <div class="about-btn"> <button class="btn btn--stripe btn--radius" routerLink="./about"
                 routerLinkActive="active">ABOUT US</button></div>
         <div class="contact-btn"><button class="btn btn--stripe btn--radius" routerLink="./contactUs"
                 routerLinkActive="active">CONTACT US</button></div>
     </div>
-
-    <button class="btn btn--stripe  login-btn" data-bs-toggle="modal" data-bs-target="#staticBackdrop"
-        >LOGIN</button>
-
+    <div class="right-group">
+        <button class="btn btn--stripe  login-btn" data-bs-toggle="modal"
+            data-bs-target="#staticBackdrop">LOGIN</button>
+        <div class="dropdown">
+            <button class="btn lang btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown"
+                aria-expanded="false">
+                EN
+            </button>
+            <ul class="dropdown-menu">
+                <li><a class="dropdown-item" (click)="switchLang('en-US')">EN</a></li>
+                <li><a class="dropdown-item" (click)="switchLang('ru-RU')">RU</a></li>
+                <li><a class="dropdown-item" (click)="switchLang('he-HE')">HE</a></li>
+            </ul>
+        </div>
+    </div>
 </div>
+
 <div class="banner-area">
     <div id="carouselExampleCaptions" class="carousel carousel-dark slide" data-bs-ride="false">
         <div class="carousel-indicators">
@@ -82,8 +94,8 @@
 
             </div>
             <div class="modal-footer">
-                <div class="contact-btn"><button data-bs-dismiss="modal" class="btn btn--stripe btn--radius" routerLink="./userAccount"
-                    routerLinkActive="active" (click)="logIn()">Sign in</button></div>
+                <div class="contact-btn"><button data-bs-dismiss="modal" class="btn btn--stripe btn--radius"
+                        routerLink="./userAccount" routerLinkActive="active" (click)="logIn()">Sign in</button></div>
             </div>
         </div>
     </div>

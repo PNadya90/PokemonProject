@@ -12,9 +12,15 @@ import { PokemonsFeedComponent } from './home/pokemons-feed/pokemons-feed.compon
 import { DescriptionComponent } from './home/description/description.component';
 import { PokemonItemComponent } from './home/pokemons-feed/pokemon-type/pokemon-item/pokemon-item.component';
 import { FullTypeComponent } from './home/full-type/full-type.component';
-import { HttpClientModule } from '@angular/common/http';
+import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { UserAccountComponent } from './home/user-account/user-account.component'
 import { FormsModule } from '@angular/forms';
+import { InternationalizationModule } from './internationalization/internationalization.module';
+import { TranslateLoader, TranslateModule } from '@ngx-translate/core';
+import { TranslateHttpLoader } from '@ngx-translate/http-loader';
+export function HttpLoaderFactory(http: HttpClient) {
+  return new TranslateHttpLoader(http, '../assets/locales/', '.json');
+}
 
 @NgModule({
   declarations: [
@@ -34,7 +40,15 @@ import { FormsModule } from '@angular/forms';
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    FormsModule
+    FormsModule,
+    InternationalizationModule.forRoot({ locale_id: 'en-US' }), // iniating with default language: en-US
+    TranslateModule.forRoot({
+      loader: {
+        provide: TranslateLoader,
+        useFactory: HttpLoaderFactory,
+        deps: [HttpClient]
+      }
+    })
   ],
   providers: [],
   bootstrap: [AppComponent]

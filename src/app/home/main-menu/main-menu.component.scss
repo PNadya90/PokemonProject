@@ -146,6 +146,19 @@ $border-color-hover: $color-black;
     }
 }
 
+
+.right-group{
+    display: flex;
+
+    .lang{
+        padding: 4px;
+        margin-left: 5px;
+    }
+
+    .dropdown-item{
+        width:10px;
+    }
+}
 .banner-area {
     background-color: #f0ffff;
     height: calc(100% - 70px);
