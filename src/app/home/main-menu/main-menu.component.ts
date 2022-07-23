@@ -10,7 +10,7 @@ import { UserAccountService } from '../user-account/user-account.service';
 export class MainMenuComponent implements OnInit {
   login: string;
   pass: string;
-  lang: string;
+  lang: string="EN";
   constructor(private userSrv: UserAccountService, private localizationSrv: LocalizationService) { }
 
   ngOnInit(): void {
@@ -24,6 +24,7 @@ export class MainMenuComponent implements OnInit {
   }
 
   switchLang(lang: string) {
+    this.lang=lang.split('-')[1];
     this.localizationSrv.useLanguage(lang);
   }
 }

@@ -1,5 +1,6 @@
 import { Injectable, Optional, SkipSelf } from '@angular/core';
 import { TranslateService } from '@ngx-translate/core';
+import { Observable, Subject } from 'rxjs';
 import { LocalizationConfigService } from './localization-config.service';
 
 /**
@@ -32,7 +33,7 @@ export class LocalizationService {
    * Initialize the service.
    * @returns {Promise<void>}
    */
-  public initService(): Promise<void> {
+  public initService():  Observable<any> {
     // language code same as file name. 
     this._localeId = localStorage.getItem('language') || 'en-US';
     return this.useLanguage(this._localeId);
@@ -42,14 +43,10 @@ export class LocalizationService {
    * change the selected language
    * @returns {Promise<void>}
    */
-  public useLanguage(lang: string): Promise<void> {
+  public useLanguage(lang: string): Observable<any> {
     this.translateService.setDefaultLang(lang);
     return this.translateService
-      .use(lang)
-      .toPromise()
-      .catch(() => {
-        throw new Error('LocalizationService.init failed');
-      });
+      .use(lang);
   }
 
   /**

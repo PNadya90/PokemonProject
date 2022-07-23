@@ -1,4 +1,4 @@
 <div class="pokemons-feed-component">
     <app-pokemon-type  *ngFor="let pType of typeList | slice:0:sliceCount;" [typeName]="pType.name" [typeId]="pType.id"></app-pokemon-type> 
-    <button class="btn btn--stripe" (click)="showMore()"> SHOW MORE POKEMON TYPES</button>
+    <button class="btn btn--stripe" (click)="showMore()">{{'more_pokemons'|translate}}</button>
 </div>

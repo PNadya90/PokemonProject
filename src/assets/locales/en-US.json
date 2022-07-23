@@ -18,7 +18,7 @@
     "contact_h2":"Call us:",
     "contact_h3":"Email us:",
     "sign_in":"Sign in:",
-    "log_in":"Login:",
+    "log_in":"Login",
     "pass":"Password:",
     "my_poke":"My Pokemons:",
     "slider_h1":"First slide label",
@@ -27,5 +27,6 @@
     "slider_t1":"Some representative placeholder content for the first slide.",
     "slider_t2":"Some representative placeholder content for the first slide.",
     "slider_t3":"Some representative placeholder content for the first slide.",
-    "hi_my_name":"Hello, my name is "
+    "hi_my_name":"Hello, my name is ",
+	"show_more":"Show more pokemons"
 }

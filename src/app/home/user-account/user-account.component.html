@@ -1,9 +1,9 @@
 <div class="pokemon-type-component">
     <div class="header-type">
-        <h1> My Pokemons: </h1>
+        <h1> {{'my_poke'|translate}} </h1>
     </div>
     <div class="container-items">
         <app-pokemon-item *ngFor="let pokemon of listPokemon" [pokemon]="pokemon" ></app-pokemon-item>
     </div>
-    <button class="btn btn--stripe" (click)="showMore()"> SHOW MORE POKEMONS</button>
+    <button class="btn btn--stripe" (click)="showMore()"> {{'show_more'|translate}}</button>
 </div>
