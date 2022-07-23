@@ -188,6 +188,9 @@ $border-color-hover: $color-black;
 
         .carousel-caption {
             bottom: -35px;
+            background: white;
+            opacity: 0.7;
+
         }
     }
 
@@ -203,34 +206,41 @@ $border-color-hover: $color-black;
                     margin: 0 5px;
                 }
             }
-     
+
             .rtl {
                 flex-direction: row-reverse;
             }
-            .modal-body{
+
+            .modal-body {
                 display: flex;
                 flex-direction: column;
             }
-            .rtl-body{
-          
+
+            .rtl-body {
+
                 align-items: flex-end;
-                .login-area{
-                    label{
+
+                .login-area {
+                    label {
                         direction: rtl;
                     }
-                    input{
+
+                    input {
                         direction: rtl;
                     }
                 }
-                .password-area{
-                    label{
+
+                .password-area {
+                    label {
                         direction: rtl;
                     }
-                    input{
+
+                    input {
                         direction: rtl;
                     }
                 }
             }
+
             label {
                 display: block;
                 font-weight: bold;
