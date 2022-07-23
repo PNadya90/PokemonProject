@@ -22,8 +22,8 @@
         <p>Weight:{{pokemon.weight}}</p>
         <p *ngFor="let stat of pokemon.stats"> {{stat.stat.name}}: {{stat.base_stat}}</p>
     </div>
-    <div class="add-button-area">
-        <button class="add-button">
+    <div class="add-button-area" >
+        <button class="add-button" (click)="addToCart($event)">
             <i class="bi bi-cart-plus"></i>
         </button>
 

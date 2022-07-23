@@ -31,14 +31,15 @@
         position: fixed;
         right: 5vw;
         bottom: 10vh;
+     
 
         .add-button {
             width: 70px;
             height: 70px;
             font-size: 40px;
-            border: solid black 2px;
-            background-color: white;
+            background: #ffd33e;
             border-radius: 35px;
+            border: dashed 2px black;
         }
     }
 }

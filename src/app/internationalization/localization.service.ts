@@ -8,7 +8,7 @@ import { LocalizationConfigService } from './localization-config.service';
  */
 @Injectable()
 export class LocalizationService {
-  private _localeId: string = 'en-US'; // default
+  private _localeId: string = 'en-EN'; // default
 
   /**
    * @constructor
@@ -35,7 +35,7 @@ export class LocalizationService {
    */
   public initService():  Observable<any> {
     // language code same as file name. 
-    this._localeId = localStorage.getItem('language') || 'en-US';
+    this._localeId = localStorage.getItem('language') || 'en-EN';
     return this.useLanguage(this._localeId);
   }
 

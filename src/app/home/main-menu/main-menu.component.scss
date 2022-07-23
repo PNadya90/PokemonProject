@@ -79,8 +79,6 @@ $border-color-hover: $color-black;
         }
 
     }
-
-    .contact-btn {}
 }
 
 .rtl-orientation{    
@@ -183,6 +181,9 @@ $border-color-hover: $color-black;
             max-width: 450px;
             height: 300px !important;
             margin: auto;
+        }
+        .carousel-caption{
+            bottom: -35px;
         }
     }
 

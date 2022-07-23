@@ -21,12 +21,12 @@
     "log_in":"Login",
     "pass":"Password:",
     "my_poke":"My Pokemons:",
-    "slider_h1":"First slide label",
-    "slider_h2":"First slide label",
-    "slider_h3":"First slide label",
-    "slider_t1":"Some representative placeholder content for the first slide.",
-    "slider_t2":"Some representative placeholder content for the first slide.",
-    "slider_t3":"Some representative placeholder content for the first slide.",
+    "slider_h1":"Choose your Pikachu!",
+    "slider_h2":"Choose your Charizard!",
+    "slider_h3":"Choose your Bulbasaur!",
+    "slider_t1":"PIKA-PIKA-PIKACHU!",
+    "slider_t2":"RRRRR RRRRRRRR RRRRRR!",
+    "slider_t3":"BUUUUULBASAURRRRRR",
     "hi_my_name":"Hello, my name is ",
-	"show_more":"Show more pokemons"
+	"show_more":"SHOW MORE POKEMONS"
 }
