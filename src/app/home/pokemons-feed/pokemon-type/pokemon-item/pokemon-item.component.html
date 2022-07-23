@@ -4,7 +4,7 @@
             <img class="pokemon-img" [src]="pokemon.sprites.other.home.front_default" />
         </div>
         <div class="pokemon-desc">
-            <h3> Name: {{pokemon.name | titlecase}}</h3>
+            <h3>{{pokemon.name | titlecase}}</h3>
             <div *ngFor="let stat of pokemon.stats | slice: 0:5;"> {{stat.stat.name}}: {{stat.base_stat}}</div>
            
         </div>

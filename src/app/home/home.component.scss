@@ -1,8 +1,6 @@
 .header-area {
     background-color: #f0ffff;
     height: 400px;
-
-    
 }
 
 .content-area {
@@ -12,6 +10,19 @@
 }
 
 .footer-area {
-    background-color: blue;
-    height: 50px;
+    padding-top: 20px;
+    border-top: black dashed 2px;
+    background-color: #ffcc01;
+    height: 100px;
+
+    .footer-info {
+        margin: 0 10%;
+        display: flex;
+        justify-content: space-around;
+        a {
+            text-decoration: none;
+            color: black;
+        }
+   
+    }
 }

@@ -1,0 +1,32 @@
+.contactUs-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #ffeded;
+    .head-area {
+        margin: 20px;
+    }
+
+    .imgBox {
+        width: 50%;
+        .imgContctUs {
+            max-width: 100%;
+
+        }
+    }
+
+    .contats-area {
+        width: 90%;
+        margin: 25px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        border: 2px dashed #ffcc01;
+        background-color: white;
+
+        p {
+            font-size: 20px;
+            font-weight: 600;
+        }
+    }
+}
