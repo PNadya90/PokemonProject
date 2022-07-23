@@ -10,7 +10,8 @@ import { PokemonService } from '../pokemon.service';
   styleUrls: ['./pokemons-feed.component.scss']
 })
 export class PokemonsFeedComponent implements OnInit {
-  typeList:PType[]
+  typeList:PType[];
+  sliceCount:number=2;
   constructor(private pokemonSrv: PokemonService, private toolSrv:ToolsService) { }
 
   ngOnInit(): void {
@@ -21,5 +22,7 @@ export class PokemonsFeedComponent implements OnInit {
       })
     })
   }
-
+  showMore(){
+    this.sliceCount+=2;
+  }
 }

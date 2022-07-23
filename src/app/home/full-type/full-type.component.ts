@@ -12,39 +12,47 @@ import { Pokemon } from 'src/app/shared/pokemon.model';
 })
 export class FullTypeComponent implements OnInit {
   id: string;
-  readonly MAX_OF_GROUP=20;
+  countPokemons = 20;
+  maxLenghOfGroup=0;
   pokemonList: Pokemon[];
-  typeName:string;
-  constructor(private route: ActivatedRoute, private pokemonSrv: PokemonService , private toolSrv: ToolsService) { }
+  allPokemonsList: PType[];
+  typeName: string;
+  constructor(private route: ActivatedRoute, private pokemonSrv: PokemonService, private toolSrv: ToolsService) { }
 
   ngOnInit(): void {
     let paramId = this.route.snapshot.paramMap.get('id');
     if (paramId) {
       this.pokemonSrv.getPokemonsByType(paramId).pipe(take(1)).subscribe(res => {
         let pokemonsIdsAndNames: PType[] = res.pokemon.map((el) => {
-        el.pokemon.id = this.toolSrv.extratId(el.pokemon.url);
-        this.typeName=res.name;
-        return el.pokemon;
+          el.pokemon.id = this.toolSrv.extratId(el.pokemon.url);
+          this.typeName = res.name;
+          return el.pokemon;
+        })
+        if (pokemonsIdsAndNames && pokemonsIdsAndNames.length > 0) {
+          this.allPokemonsList = pokemonsIdsAndNames;
+          this.pokemonList = [];
+          this.getPokemons(0, this.countPokemons)
+        }
+
       })
-     if(pokemonsIdsAndNames){{
-      if(pokemonsIdsAndNames.length>this.MAX_OF_GROUP){
-        pokemonsIdsAndNames.length=this.MAX_OF_GROUP;
-      }
-      this.pokemonList = [];
-      pokemonsIdsAndNames.forEach(el=>{
-        this.pokemonSrv.getPokemonsById(el.id).pipe(take(1)).subscribe(
-          res=>{
+    }
+  }
+
+  getPokemons(offset: number, limit: number) {
+    this.maxLenghOfGroup = Math.min(limit, this.allPokemonsList.length);
+    for (let i = offset; i <this.maxLenghOfGroup; ++i) {
+      {
+        let pokemon = this.allPokemonsList[i];
+        this.pokemonSrv.getPokemonsById(pokemon.id).pipe(take(1)).subscribe(
+          res => {
             this.pokemonList.push(res);
           }
         )
-        
-      })
-
-     }}
-      
-    })
+      }
     }
-
+  }
+  showMore() {
+    this.getPokemons(this.countPokemons,this.countPokemons += 20)
   }
 
 }
