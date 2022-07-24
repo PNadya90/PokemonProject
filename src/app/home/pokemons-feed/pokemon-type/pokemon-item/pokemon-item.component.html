@@ -2,7 +2,7 @@
     <div class="pokemon-card">
         <div class="imgBox">
             <h3 class="pokemonName">{{pokemon.name | titlecase}}</h3>
-            <img class="pokemon-img" [src]="pokemon.sprites.other.home.front_default" />
+            <img class="pokemon-img" alt="SORRY NO PHOTO" [src]="pokemon.sprites.other.home.front_default" />
         </div>
         <div class="pokemon-desc">
             <div *ngFor="let stat of pokemon.stats | slice: 0:5;"> {{stat.stat.name |titlecase}}: {{stat.base_stat}}</div>

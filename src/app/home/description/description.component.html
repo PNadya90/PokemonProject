@@ -4,13 +4,13 @@
     </div>
     <div class="photo-container">
         <div class="main-img-container">
-            <img class="main-img" [src]="pokemon.sprites.other.home.front_default">
+            <img class="main-img" [src]="pokemon.sprites.other.home.front_default" alt="assets/noImg.png">
         </div>
         <div class="addition-img" >
-            <img class="small-img" [src]="pokemon.sprites.front_shiny">
-            <img class="small-img" [src]="pokemon.sprites.back_shiny">
-            <img class="small-img" [src]="pokemon.sprites.front_default">
-            <img class="small-img" [src]="pokemon.sprites.back_default">
+            <img class="small-img" [src]="pokemon.sprites.front_shiny" alt="SORRY NO PHOTO">
+            <img class="small-img" [src]="pokemon.sprites.back_shiny" alt="SORRY NO PHOTO">
+            <img class="small-img" [src]="pokemon.sprites.front_default" alt="SORRY NO PHOTO">
+            <img class="small-img" [src]="pokemon.sprites.back_default" alt="SORRY NO PHOTO">
         </div>
 
     </div>
@@ -20,7 +20,7 @@
         <p>Abilities: {{pokemon.base_experience}}</p>
         <p>Height:{{pokemon.height}}</p>
         <p>Weight:{{pokemon.weight}}</p>
-        <p *ngFor="let stat of pokemon.stats"> {{stat.stat.name}}: {{stat.base_stat}}</p>
+        <p *ngFor="let stat of pokemon.stats"> {{stat.stat.name|titlecase}}: {{stat.base_stat}}</p>
     </div>
     <div class="add-button-area" >
         <button class="add-button" (click)="addToCart($event)">

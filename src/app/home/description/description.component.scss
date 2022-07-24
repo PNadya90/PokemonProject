@@ -9,10 +9,13 @@
         display: flex;
         justify-content: center;
         padding: 15px;
+        background-color: white;
+        border: dashed 2px;
     }
 
     .photo-container {
         flex: 1;
+        margin: 3% 5%;
 
         .main-img-container {
             .main-img {
@@ -25,13 +28,17 @@
 
     .decr-info {
         flex: 1;
+        margin: 3% 5%;
+        padding: 5%;
+        background-color: white;
+        font-weight: 600;
     }
 
     .add-button-area {
         position: fixed;
         right: 5vw;
         bottom: 10vh;
-     
+
 
         .add-button {
             width: 70px;
