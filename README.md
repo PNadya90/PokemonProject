@@ -9,4 +9,7 @@ Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app w
 
 Site has responsive design so you can check how its look at mobile devices
 
-please run `ng serve --host 0.0.0.0` find out what is your ip addres in wifi network and open site on mobile device forexample `http://192.168.0.10:4200/`
+please run `ng serve --host 0.0.0.0` find out what is your ip addres in wifi network and open site on mobile device forexample `http://192.168.0.10:4200/`.
+
+If you want to try login in personal account and after see your added pokemons to cart please use: login:user, 
+                 password:user. 
