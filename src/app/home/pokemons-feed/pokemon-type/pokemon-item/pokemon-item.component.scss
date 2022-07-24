@@ -84,3 +84,34 @@
         }
     }
 }
+//for firefox 
+@supports (-moz-appearance:none){
+    .pokemon-item-component {
+        .pokemon-card {
+            .imgBox {
+                .pokemon-img {
+                    width:initial;
+                }
+            }
+            .pokemon-desc {
+                width: 100%;
+            }
+        }
+    }
+}
+//for safari
+@media not all and (min-resolution:.001dpcm) { 
+    @supports (-webkit-appearance:none) {
+        .pokemon-item-component {
+            .pokemon-card {
+                .imgBox {
+                    .pokemon-img {
+                        width:100%;
+                    }
+                }
+                .pokemon-desc {
+                    width: 100%;
+                }
+            }
+        } 
+    }}
