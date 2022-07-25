@@ -37,6 +37,7 @@ export class UserAccountService {
      }
     }
   }
+  //not plugged in
   logOut(){
     let user = this.$currentUser.getValue();
     if(user){
@@ -52,6 +53,7 @@ export class UserAccountService {
       localStorage.setItem('user',JSON.stringify(user));
     }
   };
+  //not added
   removeFromCart(pokemon:PType){
     let user = this.$currentUser.getValue();
     if(user){

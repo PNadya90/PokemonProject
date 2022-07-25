@@ -19,8 +19,6 @@ export class MainMenuComponent implements OnInit {
   logIn() {
     this.userSrv.signIn(this.login, this.pass);
     console.log(this.login);
-
-
   }
 
   switchLang(lang: string) {

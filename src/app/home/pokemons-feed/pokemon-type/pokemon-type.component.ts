@@ -46,7 +46,6 @@ export class PokemonTypeComponent implements OnInit {
     })
   }
   showType() {
-    this.router.navigate(['/fullType/' + this.typeId]);
     if (this.typeId) {
       this.router.navigateByUrl('/fullType/' + this.typeId);
     }
