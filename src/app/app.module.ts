@@ -43,7 +43,7 @@ export function HttpLoaderFactory(http: HttpClient) {
     AppRoutingModule,
     HttpClientModule,
     FormsModule,
-    InternationalizationModule.forRoot({ locale_id: 'en-US' }), // iniating with default language: en-US
+    InternationalizationModule.forRoot({ locale_id: 'en-EN' }), // iniating with default language: en-US
     TranslateModule.forRoot({
       loader: {
         provide: TranslateLoader,
